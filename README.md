@@ -71,33 +71,6 @@ OS | Windows (via WSL) |
 
 ---
 
-## 📂 Project Structure
-
-project-root/
-│
-├── .venv/ # Python virtual environment (WSL - local development)
-│
-├── docker/
-│ ├── airflow/
-│ │ ├── dags/
-│ │ │ └── ecommerce_pipeline.py
-│ │ ├── etl/
-│ │ │ ├── extract.py
-│ │ │ ├── transform.py
-│ │ │ └── load.py
-│ │ ├── data/
-│ │ │ ├── raw_carts.csv
-│ │ │ └── clean_carts.csv
-│ │ └── docker-compose.yml
-│ │
-│ └── db/
-│ └── docker-compose.yml
-│
-├── diagrams/
-│ └── etl_flow.png
-│
-└── README.md
-
 ## ▶️ Local Development Environment (WSL)
 
 This project is developed and tested using **WSL (Windows Subsystem for Linux)** to ensure a Linux-compatible environment similar to production systems.
@@ -125,4 +98,12 @@ docker-compose up -d
 ### Access Airflow UI
 ```bash
 http://localhost:8080
+
+Username: airflow
+Password: airflow
 ```
+
+## Output
+- Cleaned and transformed cart data
+- PostgreSQL fact table: fact_carts
+- Fully automated ETL workflow managed by Airflow DAGs
