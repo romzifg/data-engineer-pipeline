@@ -1,0 +1,21 @@
+run_docker_access_db.txt
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Airflow logs & runtime
+docker/airflow/logs/
+docker/airflow/config/
+docker/airflow/plugins/
+docker/airflow/.env
+
+# Airflow local env
+.env
+
+# Data files (optional)
+docker/airflow/data/
+
+# OS
+.DS_Store
